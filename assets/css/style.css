@@ -1,0 +1,503 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Bebas Neue', cursive;
+}
+
+
+
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* wave animate */
+
+.wave {
+    animation-name: wave-animation; 
+    animation-duration: 2.5s;      
+    animation-iteration-count: infinite;  
+    transform-origin: 70% 70%;       
+    display: inline-block;
+  }
+  
+  @keyframes wave-animation {
+      0% { transform: rotate( 0.0deg) }
+     10% { transform: rotate(14.0deg) }
+     20% { transform: rotate(-8.0deg) }
+     30% { transform: rotate(14.0deg) }
+     40% { transform: rotate(-4.0deg) }
+     50% { transform: rotate(10.0deg) }
+     60% { transform: rotate( 0.0deg) } 
+    100% { transform: rotate( 0.0deg) }
+  }
+  
+
+/* SIDE DISPLAY SECTION */
+
+.left__side{
+    width: 40px;
+    position: fixed;
+    bottom: 0px;
+    left: 40px;
+    right: auto;
+    z-index: 10;
+    color: #000000;
+}
+
+.social__left {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.social__left a {
+    color: #000000;
+    font-size: 28px;
+}
+
+.social__left a:hover {
+    color: #007BFF;
+}
+
+.social__left li:hover{
+    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    transform: translateY(-5px);
+}
+
+.social__left li:last-of-type::after{
+    content: "";
+    display: block;
+    width: 1px;
+    height: 90px;
+    margin: 0px auto;
+    background-color: #000000;
+    margin-top: 20px;
+}
+
+.right__side {
+    width: 40px;
+    position: fixed;
+    bottom: 0px;
+    left: auto;
+    right: 40px;
+    z-index: 10;
+    color: #000000;
+}
+
+.email__side {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    position: relative;
+}
+
+.email__side a {
+    margin: 20px auto;
+    padding: 10px;
+    font-family: 'Fira Code', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+    color: #000000;
+}
+.email__side a:hover {
+    color: #007BFF;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    transform: translateY(-3px);
+    text-decoration: none;
+}
+
+.email__side::after{
+    content: "";
+    display: block;
+    width: 1px;
+    height: 90px;
+    margin: 0px auto;
+    background-color: #000000;
+}
+
+/* END OF SIDE DISPLAY */
+
+/* HERO SECTION */
+
+
+.heroIntro {
+    text-align: left;
+    height: 100vh;
+    padding: 100px;
+    width: 80%;
+    font-weight: 300;
+    font-size: 40px;
+}
+
+.hello__intro {
+    margin: 20px 0;
+}
+
+.hello__intro img {
+    width: 35px;
+    height: 35px;
+    margin-bottom: 10px;
+}
+
+.name__intro {
+    padding-top: 150px;
+}
+
+.special__intro {
+    width: 70%;
+}
+
+.special__intro {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.getintouch__button {
+    border: 1px solid #000000;
+    font-family: 'Fira Code', monospace;
+    padding: 10px;
+    margin-top: 50px;
+}
+
+.getintouch__button:focus {
+    box-shadow: none;
+}
+
+.getintouch__button:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+
+/* END OF HERO SECTION */
+
+/* ABOUT ME SECTION */
+
+.aboutme {
+    margin: 0 150px;
+    height: 50vh;
+}
+
+.aboutme hr {
+    border: 1px solid #d2d2d7;
+    width: 20%;
+}
+
+.aboutme__intro {
+    text-align: justify;
+    font-size: 18px;
+}
+
+.aboutme h4 {
+    color: #007BFF;
+}
+
+.skills__hr{
+    margin-left: 20px;
+}
+.aboutme__skillscont {
+    display: inline-block;
+    margin: 0 20px;
+    vertical-align: top;
+}
+
+.aboutme__skills {
+    font-size: 18px;
+}
+
+.aboutme__skillscont li{ 
+    list-style-type: none;
+    font-size: 16px;
+}
+
+/* END OF ABOUT ME */
+
+/* BUILD */
+
+section.build {
+    margin: 0px auto;
+    padding: 100px 0px;
+    max-width: 1000px;
+}
+
+.build__intro {
+    color: #007BFF;
+    text-align: center;
+}
+
+.build hr {
+    border: 1px solid #d2d2d7;
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.build__project {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(12, 1fr);
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+
+.build__imageCont {
+    box-shadow: 0 5px 20px 0 #aaaaaa;
+}
+
+.build__imageCont a {
+    opacity: 0.1;   
+}
+
+.build__imageCont a:hover{
+    opacity: 1;
+}
+
+.feature__one {
+    text-align: right;
+}
+
+.feature__onePar{
+    font-family: 'Fira Code', monospace;
+}
+
+.feature__box {
+    font-size: 18px;
+    padding: 30px;
+    margin-left: -100px;
+    text-align: justify;
+    background-color: #e4e4e4;
+    box-shadow: 0 5px 20px 0 #aaaaaa;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.feature__two {
+    text-align: left;
+}
+
+.feature__box2 {
+    font-size: 18px;
+    padding: 30px;
+    text-align: justify;
+    background-color: #e4e4e4;
+    box-shadow: 0 5px 20px 0 #363434;
+    border-radius: 20px;
+    margin-right: -100px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#image__box2 {
+    height: 375px;
+    object-fit: cover;
+}
+
+section.build .row {
+    margin-top: 100px;
+}
+
+#image__box3 {
+    width: 100%;
+    height: 375px;
+    object-fit: cover;
+}
+
+/* END OF BUILD */
+
+/* SECTION FOR OTHER PROJECT */
+
+section.other__project {
+    margin-top: 100px;
+}
+
+.noteworthy__intro {
+    text-align: left;
+    color: #007BFF;
+}
+
+.other__project hr {
+    border: 1px solid #d2d2d7;
+    width: 30%;
+}
+
+.project__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px;
+    position: relative;
+    margin-top: 50px;
+}
+
+.grid__style {
+    transition-delay: 0ms;
+    visibility: visible;
+    opacity: 1;
+    margin-bottom: 20px;
+}
+
+.project__content {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    height: 100%;
+    padding: 2rem 1.75rem;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+    box-shadow: 0 5px 20px 0 #363434;
+    border-radius: 20px;
+}
+
+.project__content:hover{
+    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    transform: translateY(-5px);
+}
+
+.project__top {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.folder__image i {
+    font-size: 40px;
+    color: #007BFF;
+}
+
+.project__link i{
+    color: #000000;
+    font-size: 30px;
+}
+
+.project__link i:hover{
+    color: #007BFF;
+    
+}
+
+
+.project__intro {
+    font-size: 22px;
+    margin: 20px 0;
+}
+
+.project__description {
+    font-size: 18px;
+}
+
+.project__tools li{
+    list-style-type: none;
+    display: inline;
+    font-family: 'Fira Code', monospace;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+/* END OF OTHER PROJECT */
+
+/* SECTION FOR CONTACT ME */
+
+section.contact__me {
+    margin-top: 100px;
+}
+
+.contact__intro {
+    text-align: center;
+    color: #007BFF; 
+}
+
+.contact__me hr {
+    border: 1px solid #d2d2d7;
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact__GIT {
+    text-align: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 48px;
+    font-weight: bolder;
+    letter-spacing: 5px;
+}
+
+.contact__opportunity {
+    font-size: 18px;
+    width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.contact__hello {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 22px;
+    font-family: 'Fira Code', monospace;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-top: 50px;
+    margin-bottom: 150px;
+    width: 10%;
+}
+
+.contact__hello:focus {
+    box-shadow: none;
+}
+
+.contact__hello:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.footer__copy{
+    font-family: 'Fira Code', monospace;
+    font-size: 12px;
+    text-align: center;
+}
+/* END OF CONTACT ME */
+
+/* Footer Section */
+
+.footer__copy {
+    margin: 50px;
+}
+
+.social__media a{
+    font-size: 28px;
+    margin: 10px;
+    color: #000000;
+}    
+
+.social__media a:hover {
+    color: #007BFF;
+}
+
+.social__media li {
+    display: inline;
+    display: none;
+}
+
+
+/* END of Footer section */
