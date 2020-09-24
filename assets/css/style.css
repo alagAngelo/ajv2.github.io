@@ -134,26 +134,26 @@ body{
 
 
 .heroIntro {
-    text-align: left;
-    height: 100vh;
-    padding: 100px;
-    width: 80%;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 100vh;
     font-weight: 300;
-    font-size: 40px;
+    font-size: clamp(40px, 6vw, 60px);
+    padding: 0 100px;
 }
 
 .hello__intro {
-    margin: 20px 0;
-}
-
-.hello__intro img {
-    width: 35px;
-    height: 35px;
-    margin-bottom: 10px;
+    font-size: 30px;
+    transition-delay: 100ms;
 }
 
 .name__intro {
-    padding-top: 150px;
+    padding-top: 100px;
+    transition-delay: 200ms;
 }
 
 .special__intro {
@@ -161,7 +161,7 @@ body{
 }
 
 .special__intro {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 300;
 }
 
@@ -187,8 +187,8 @@ body{
 /* ABOUT ME SECTION */
 
 .aboutme {
-    margin: 0 150px;
-    height: 50vh;
+    width: 60%;
+    margin: 0 auto;
 }
 
 .aboutme hr {
@@ -199,29 +199,37 @@ body{
 .aboutme__intro {
     text-align: justify;
     font-size: 18px;
+    margin: 50px;
 }
 
 .aboutme h4 {
     color: #007BFF;
 }
 
-.skills__hr{
-    margin-left: 20px;
-}
-.aboutme__skillscont {
-    display: inline-block;
-    margin: 0 20px;
-    vertical-align: top;
+.skills__flex{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    gap: 15px;
+    position: relative;
+    margin: 50px 0;
+    text-align: center;
+    height: 100%;
 }
 
-.aboutme__skills {
+
+.about__cont ul {
     font-size: 18px;
 }
+.about__cont ul:last-of-type {
+    margin-bottom: 150px;
+}
 
-.aboutme__skillscont li{ 
+.about__cont li{ 
     list-style-type: none;
     font-size: 16px;
+    font-family: 'Fira Code', monospace;
 }
+
 
 /* END OF ABOUT ME */
 
@@ -478,14 +486,16 @@ section.contact__me {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    font-size: 22px;
+    font-size: clamp(14px, 2vw, 20px);
     font-family: 'Fira Code', monospace;
     border: 1px solid #000000;
     border-radius: 5px;
     padding: 10px 15px;
     margin-top: 50px;
     margin-bottom: 150px;
-    width: 10%;
+    width: 150px;
+    text-align: center;
+    color: #000000;
 }
 
 .contact__hello:focus {
@@ -521,7 +531,6 @@ section.contact__me {
 }
 
 .social__media li {
-    display: inline;
     display: none;
 }
 
@@ -529,6 +538,28 @@ section.contact__me {
 /* END of Footer section */
 
 /* FOR MEDIA QUERIES */
+
+/* 1400px */
+
+@media (max-width: 1400px){
+    .aboutme__skillscont {
+        margin: 0;
+        padding: 35px;
+    }
+    .aboutme__skillscont:first-of-type {
+        margin-left: 20px;
+    }
+}
+
+/* 1200px */
+
+@media (max-width: 1280px){
+    .skills__flex{
+        display: grid;
+        grid-template-columns: repeat(4, minmax(150px, 1fr));
+}
+
+
 
 /* 1080 */
 
@@ -540,18 +571,49 @@ section.contact__me {
         grid-column: 1 / 9;
     }
     }
-    
+
+
+/* 994 */
+
+@media (max-width: 994px){
+    .side__display{
+        display: none;
+    }
+    .social__media li {
+        display: inline-block;
+    }
+    .heroIntro{
+        padding: 80px 0;
+    }
+    .aboutme {
+        width: 100%;
+    }
+    .skills__flex{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    .contact__opportunity {
+        width: 100%;
+    }
+
+}
+
+
+
+
+
+/* 768 */
     @media (max-width: 768px){
     .style__grid:not(:last-of-type) {
         margin-bottom: 70px;
     }
     .style__grid:nth-of-type(2n+1) .feature__one {
         grid-column: 1 / -1;
-        padding: 40px 40px 30px;
+        padding: 20px 40px 30px;
     }
     .style__grid .feature__one {
         grid-column: 1 / -1;
-        padding: 40px 40px 30px;
+        padding: 20px 40px 30px;
         z-index: 5;
     }
     .style__grid .feature__box {
@@ -571,6 +633,53 @@ section.contact__me {
     .style__grid .build__imageCont {
         grid-column: 1 / -1;
         height: 100%;
-        opacity: 0.25;
+        opacity: 0.10;
+        
     }
+    .aboutme__intro{
+        margin: 50px 0;
     }
+    .skills__flex{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    .feature__onePar {
+        color: #007BFF;
+    }
+    .contact__opportunity {
+        width: 100%;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 767px){
+    .skills__flex{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+
+
+
+/* 480 */
+@media (max-width: 480px){
+    .heroIntro {
+        padding: 0 20px;
+    }
+    .name__intro {
+        padding-top: 0;
+        font-size: 20px;
+    }
+    .name__intro {
+        font-size: 32px;
+    }
+    .special__intro {
+        font-size: 20px;
+        width: 100%;
+    }
+    .skills__flex{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
+}
