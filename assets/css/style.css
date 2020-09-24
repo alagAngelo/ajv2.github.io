@@ -132,6 +132,51 @@ body{
 
 /* HERO SECTION */
 
+.navbar-brand{
+    font-size: 42px;
+    padding-left: 20px;
+}
+
+.navbar-nav .nav-link {
+    padding: 10px !important;
+    margin-right: 5px;
+    font-family: 'Fira Code', monospace;
+    font-size: 16px;
+    color: #000000 !important;
+}
+
+.navbar-nav .nav-link span{
+    font-family: 'Fira Code', monospace;
+    font-size: 16px;
+    color: #007BFF;
+    padding: 0 5px;
+}
+
+.navbar-collapse {
+    text-align: center;
+}
+
+.resume__button {
+    color: #000000;
+    background-color: transparent;
+    border: 1px solid #007BFF;
+    border-radius: 5px;
+    padding: 0.75rem 1rem;
+    font-family: 'Fira Code', monospace;
+    line-height: 1;
+    text-decoration: none !important;
+    cursor: pointer;
+    margin-left: 15px;
+    font-size: 16px;
+}
+.resume__button:hover {
+    color: #ffffff;
+    background-color: #000000;
+    border: 1px solid #000000;
+}
+
+
+
 
 .heroIntro {
     display: flex;
@@ -270,6 +315,13 @@ body{
     grid-area: 1 / 1 / -1 / 7;
 }
 
+.style__grid img.build__image {
+    opacity: 0.10;
+}
+
+.style__grid img.build__image:hover {
+    opacity: 1;
+}
 .feature__box {
     font-size: 18px;
     padding: 30px;
@@ -595,7 +647,34 @@ section.contact__me {
     .contact__opportunity {
         width: 100%;
     }
-
+    .navbar-brand{
+        display: none;
+    }
+    .navbar-collapse span {
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+    .navbar-collapse .nav-link{
+        padding: 0;
+        padding-bottom: 20px;
+    }
+    .resume__cont {
+        margin-top: 50px;
+    }
+    .resume__button {
+        color: #000000;
+        background-color: transparent;
+        border: 1px solid #007BFF;
+        border-radius: 5px;
+        font-size: 16px;
+        font-family: 'Fira Code', monospace;
+        line-height: 1;
+        text-decoration: none;
+        cursor: pointer;
+        padding: 15px 50px;
+        margin: 0;
+    }
 }
 
 
