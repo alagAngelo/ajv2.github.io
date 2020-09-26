@@ -197,12 +197,10 @@ body{
 
 .hello__intro {
     font-size: 30px;
-    transition-delay: 100ms;
 }
 
 .name__intro {
     padding-top: 100px;
-    transition-delay: 200ms;
 }
 
 .special__intro {
