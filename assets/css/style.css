@@ -219,11 +219,11 @@ body{
     font-family: 'Fira Code', monospace;
     padding: 10px;
     margin-top: 50px;
-    text-decoration: none;
 }
 
 .getintouch__button:focus {
     box-shadow: none;
+    text-decoration: none;
 }
 
 .getintouch__button:hover {
