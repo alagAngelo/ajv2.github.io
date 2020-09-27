@@ -223,12 +223,15 @@ body{
 
 .getintouch__button:focus {
     box-shadow: none;
-    text-decoration: none;
 }
 
 .getintouch__button:hover {
     background-color: #000000;
     color: #ffffff;
+}
+
+a.contact__hello {
+    text-decoration: none;
 }
 
 
