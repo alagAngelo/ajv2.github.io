@@ -683,6 +683,9 @@ section.contact__me {
         padding: 15px 50px;
         margin: 0;
     }
+    .style__grid img.build__image {
+        opacity: 0.50;
+    }
 }
 
 
